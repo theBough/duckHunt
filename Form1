@@ -1,0 +1,68 @@
+Public Class Form1
+    Dim shotAnimationCounter As Integer
+    Dim duckAnimationCounter As Integer
+    Private Sub shootTimer_Tick(sender As Object, e As EventArgs) Handles shootTimer.Tick
+        Select Case shotAnimationCounter
+            Case 0
+                gun.Image = shot1.Image
+                shotAnimationCounter += 1
+            Case 1
+                gun.Image = shot2.Image
+                shotAnimationCounter += 1
+            Case 2
+                gun.Image = shot3.Image
+                shotAnimationCounter += 1
+            Case 3
+                gun.Image = reload.Image
+                shotAnimationCounter += 1
+            Case 4
+                gun.Image = reload1.Image
+                shotAnimationCounter += 1
+            Case 5
+                gun.Image = reload2.Image
+                shotAnimationCounter += 1
+            Case 6
+                gun.Image = shot.Image
+                shootTimer.Stop()
+                shotAnimationCounter = 0
+        End Select
+    End Sub
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        shotAnimationCounter = 0
+        duckAnimationCounter = 0
+    End Sub
+
+    Private Sub field_MouseMove1(sender As Object, e As MouseEventArgs) Handles field.MouseMove
+        gun.Left = e.Location.X - gun.Width / 2
+    End Sub
+
+    Private Sub field_Click(sender As Object, e As EventArgs) Handles field.Click
+        shootTimer.Start()
+    End Sub
+
+    Private Sub duckAnimation_Tick(sender As Object, e As EventArgs) Handles duckAnimation.Tick
+        Select Case duckAnimationCounter
+            Case 0
+                duck.Image = duck1.Image
+                duckAnimationCounter += 1
+            Case 1
+                duck.Image = duck2.Image
+                duckAnimationCounter += 1
+            Case 2
+                duck.Image = duck3.Image
+                duckAnimationCounter += 1
+            Case 3
+                duck.Image = duck4.Image
+                duckAnimationCounter += 1
+            Case 4
+                duck.Image = duck5.Image
+                duckAnimationCounter += 1
+            Case 5
+                duck.Image = duck6.Image
+                duckAnimationCounter += 1
+            Case 6
+                duck.Image = duck5.Image
+                duckAnimationCounter = 5
+        End Select
+    End Sub
+End Class
