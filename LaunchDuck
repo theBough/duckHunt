@@ -1,0 +1,9 @@
+    Private Sub launchDuck()
+        duckAnimationCounter = 0
+        duck.Top = field.Bottom
+        duck.Left = r.Next(155, 840)
+        duckLeftRightSpeed = r.Next(2, 10)
+        duckUpDownSpeed = r.Next(-10, -2)
+        MoveDuck.Start()
+        duckAnimation.Start()
+    End Sub
