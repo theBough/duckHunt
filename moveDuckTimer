@@ -1,0 +1,4 @@
+  Private Sub MoveDuck_Tick(sender As Object, e As EventArgs) Handles MoveDuck.Tick
+        duck.Left += duckLeftRightSpeed
+        duck.Top += duckUpDownSpeed
+    End Sub
