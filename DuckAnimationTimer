@@ -1,0 +1,25 @@
+  Private Sub duckAnimation_Tick(sender As Object, e As EventArgs) Handles duckAnimation.Tick
+        Select Case duckAnimationCounter
+            Case 0
+                duck.Image = duck1.Image
+                duckAnimationCounter += 1
+            Case 1
+                duck.Image = duck2.Image
+                duckAnimationCounter += 1
+            Case 2
+                duck.Image = duck3.Image
+                duckAnimationCounter += 1
+            Case 3
+                duck.Image = duck4.Image
+                duckAnimationCounter += 1
+            Case 4
+                duck.Image = duck5.Image
+                duckAnimationCounter += 1
+            Case 5
+                duck.Image = duck6.Image
+                duckAnimationCounter += 1
+            Case 6
+                duck.Image = duck5.Image
+                duckAnimationCounter = 5
+        End Select
+    End Sub
