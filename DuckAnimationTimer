@@ -1,3 +1,4 @@
+  Dim duckAnimationCounter As Integer
   Private Sub duckAnimation_Tick(sender As Object, e As EventArgs) Handles duckAnimation.Tick
         Select Case duckAnimationCounter
             Case 0
