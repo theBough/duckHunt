@@ -1,0 +1,26 @@
+ Private Sub shootTimer_Tick(sender As Object, e As EventArgs) Handles shootTimer.Tick
+        Select Case shotAnimationCounter
+            Case 0
+                gun.Image = shot1.Image
+                shotAnimationCounter += 1
+            Case 1
+                gun.Image = shot2.Image
+                shotAnimationCounter += 1
+            Case 2
+                gun.Image = shot3.Image
+                shotAnimationCounter += 1
+            Case 3
+                gun.Image = reload.Image
+                shotAnimationCounter += 1
+            Case 4
+                gun.Image = reload1.Image
+                shotAnimationCounter += 1
+            Case 5
+                gun.Image = reload2.Image
+                shotAnimationCounter += 1
+            Case 6
+                gun.Image = shot.Image
+                shootTimer.Stop()
+                shotAnimationCounter = 0
+        End Select
+    End Sub
