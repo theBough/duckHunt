@@ -1,3 +1,4 @@
+ Dim shotAnimationCounter As Integer
  Private Sub shootTimer_Tick(sender As Object, e As EventArgs) Handles shootTimer.Tick
         Select Case shotAnimationCounter
             Case 0
