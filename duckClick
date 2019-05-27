@@ -1,0 +1,8 @@
+  Private Sub duck_Click(sender As Object, e As EventArgs) Handles duck.Click
+        duckAnimation.Stop()
+        MoveDuck.Stop()
+        duckFallTimer.Start()
+        goal(goalDuckCounter).Hide()
+        goalDuckCounter -= 1
+        levelUp()
+    End Sub
