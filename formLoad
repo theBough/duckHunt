@@ -1,0 +1,7 @@
+Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        shotAnimationCounter = 0
+        duckAnimationCounter = 0
+        duckFallAnimationCounter = 0
+        goalDuckCounter = -1
+        makeGoalDucks()
+    End Sub
