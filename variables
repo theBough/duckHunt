@@ -1,0 +1,10 @@
+#Region "variables"
+    Dim shotAnimationCounter As Integer
+    Dim duckAnimationCounter As Integer
+    Dim duckFallAnimationCounter As Integer
+    Dim r As New Random
+    Dim duckLeftRightSpeed As Integer
+    Dim duckUpDownSpeed As Integer
+    Dim goal(30) As PictureBox
+
+#End Region
