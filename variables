@@ -6,5 +6,5 @@
     Dim duckLeftRightSpeed As Integer
     Dim duckUpDownSpeed As Integer
     Dim goal(30) As PictureBox
-
+    Dim goalDuckCounter As Integer
 #End Region
