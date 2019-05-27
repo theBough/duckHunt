@@ -1,0 +1,14 @@
+Private Sub duckFallTimer_Tick(sender As Object, e As EventArgs) Handles duckFallTimer.Tick
+        duckFallAnimationCounter += 1
+        If duckFallAnimationCounter < 10 Then
+            duck.Image = duckHit.Image
+        Else
+            duck.Image = duckFall.Image
+            duck.Top += 7
+            If duck.Bottom > field.Bottom Then
+                duckFallTimer.Stop()
+                duckFallAnimationCounter = 0
+                launchDuck()
+            End If
+        End If
+    End Sub
