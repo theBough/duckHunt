@@ -1,0 +1,11 @@
+ Sub levelUp()
+        If goalDuckCounter <= 0 Then
+            lblLevelUp.Show()
+            duckAnimation.Stop()
+            MoveDuck.Stop()
+            For i = 0 To 10
+                goal(i).Show()
+            Next
+            goalDuckCounter = 11
+        End If
+    End Sub
