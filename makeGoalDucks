@@ -1,0 +1,20 @@
+Sub makeGoalDucks()
+        For i = 0 To 10
+            goalDuckCounter += 1
+            Me.Text = goalDuckCounter
+            goal(i) = New PictureBox
+            With goal(i)
+                .Top = 29
+                .Left = 326 + i * 30
+                .Width = 25
+                .Height = 30
+                .Image = goalOriginal.Image
+                .BackColor = Color.Transparent
+                .SizeMode = PictureBoxSizeMode.StretchImage
+                .BringToFront()
+            End With
+            Me.Controls.Add(goal(i))
+
+        Next
+
+    End Sub
